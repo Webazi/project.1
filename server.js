@@ -69,7 +69,7 @@ db.connect((err) => {
     });
 
 
-
+// untuk menghapus sebuah data padat database
     app.post("/hapus", (req, res) => {
       const userId = req.body.userId;
       const sql = `DELETE FROM user WHERE user , id_user = ${userId}`;
@@ -85,7 +85,7 @@ db.connect((err) => {
       });
     });
 })
-
+// port localserver
 app.listen(port, () => {
   console.log(`Server on localhost:${port}`);
 })
